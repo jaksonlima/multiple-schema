@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres
+    container_name:  schema-db-multiple
+    environment:
+      POSTGRES_DB: dasa
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: dasa
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
